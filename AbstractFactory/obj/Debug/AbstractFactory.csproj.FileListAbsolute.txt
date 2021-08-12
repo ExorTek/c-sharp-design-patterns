@@ -5,3 +5,10 @@ C:\Users\Memet\Desktop\DesignPatterns\AbstractFactory\obj\Debug\AbstractFactory.
 C:\Users\Memet\Desktop\DesignPatterns\AbstractFactory\obj\Debug\AbstractFactory.csproj.CoreCompileInputs.cache
 C:\Users\Memet\Desktop\DesignPatterns\AbstractFactory\obj\Debug\AbstractFactory.exe
 C:\Users\Memet\Desktop\DesignPatterns\AbstractFactory\obj\Debug\AbstractFactory.pdb
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\bin\Debug\AbstractFactory.exe.config
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\bin\Debug\AbstractFactory.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\bin\Debug\AbstractFactory.pdb
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\obj\Debug\AbstractFactory.csproj.AssemblyReference.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\obj\Debug\AbstractFactory.csproj.CoreCompileInputs.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\obj\Debug\AbstractFactory.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\AbstractFactory\obj\Debug\AbstractFactory.pdb

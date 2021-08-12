@@ -5,3 +5,10 @@ C:\Users\Memet\Desktop\DesignPatterns\FactoryMethod\obj\Debug\FactoryMethod.cspr
 C:\Users\Memet\Desktop\DesignPatterns\FactoryMethod\obj\Debug\FactoryMethod.csproj.CoreCompileInputs.cache
 C:\Users\Memet\Desktop\DesignPatterns\FactoryMethod\obj\Debug\FactoryMethod.exe
 C:\Users\Memet\Desktop\DesignPatterns\FactoryMethod\obj\Debug\FactoryMethod.pdb
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\bin\Debug\FactoryMethod.exe.config
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\bin\Debug\FactoryMethod.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\bin\Debug\FactoryMethod.pdb
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\obj\Debug\FactoryMethod.csproj.AssemblyReference.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\obj\Debug\FactoryMethod.csproj.CoreCompileInputs.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\obj\Debug\FactoryMethod.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\FactoryMethod\obj\Debug\FactoryMethod.pdb
