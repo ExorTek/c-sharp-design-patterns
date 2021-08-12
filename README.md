@@ -397,4 +397,60 @@ namespace Facade
 ```
 - [Kaynak 1](https://www.kadir.xyz/yazi/57/facade-tasarim-deseni-facade-pattern) 
 - [Kaynak 2](https://www.gencayyildiz.com/blog/c-facade-design-patternfacade-tasarim-deseni/) 
+## Factory Method Design Pattern
+- Oluşturduğumuz bir interface ya da abstract sınıftan türeterek başka bir sınıf oluşturma işlemine verilen addır Factory Pattern. Oldukça sık kullanılan bu pattern aynı özelliği kullanmak isteyen sınıflar tarafından kullanılır.
+```csharp
+using System;
 
+namespace FactoryMethod
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CustomerManager customerManager = new CustomerManager();
+            customerManager.Save();
+
+            Console.ReadKey();
+        }
+    }
+
+    class LoggerFactory : ILoggerFactory
+    {
+        public ILogger CreateLogger()
+        {
+            return new MdLogger();
+        }
+    }
+
+    internal interface ILoggerFactory
+    {
+    }
+
+    internal interface ILogger
+    {
+        void Log();
+    }
+
+    class MdLogger : ILogger
+    {
+        public void Log()
+        {
+            Console.WriteLine("Logged Md");
+
+        }
+    }
+
+    class CustomerManager
+    {
+       public void Save()
+        {
+            Console.WriteLine("Saved!!");
+            ILogger logger = new LoggerFactory().CreateLogger();
+            logger.Log();
+        }
+    }
+}
+```
+- [Kaynak 1](http://www.canertosuner.com/post/factory-method-pattern-nedir-nasil-kullanilir) 
+- [Kaynak 2](https://blog.burakkutbay.com/design-pattern-factory-pattern-nedir.html/) 
