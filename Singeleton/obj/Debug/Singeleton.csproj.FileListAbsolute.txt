@@ -1,0 +1,7 @@
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\bin\Debug\Singeleton.exe.config
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\bin\Debug\Singeleton.exe
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\bin\Debug\Singeleton.pdb
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\obj\Debug\Singeleton.csproj.AssemblyReference.cache
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\obj\Debug\Singeleton.csproj.CoreCompileInputs.cache
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\obj\Debug\Singeleton.exe
+C:\Users\Memet\Desktop\DesignPatterns\Singeleton\obj\Debug\Singeleton.pdb
