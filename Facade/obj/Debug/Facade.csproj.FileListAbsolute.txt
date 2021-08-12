@@ -1,0 +1,7 @@
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\bin\Debug\Facade.exe.config
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\bin\Debug\Facade.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\bin\Debug\Facade.pdb
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\obj\Debug\Facade.csproj.AssemblyReference.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\obj\Debug\Facade.csproj.CoreCompileInputs.cache
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\obj\Debug\Facade.exe
+C:\Users\Memet\Desktop\c-sharp-design-patterns\Facade\obj\Debug\Facade.pdb
