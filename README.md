@@ -1,5 +1,5 @@
 # CSharp(C#) Design Patterns
-## Abstract Factory
+## Abstract Factory Design
 - İlişkisel olan birden fazla nesnenin üretimini tek bir arayüz tarafından değil her ürün ailesi için farklı bir arayüz tanımlayarak sağlamaktadır.
 ```csharp
 using System;
@@ -114,7 +114,7 @@ namespace AbstractFactory
 ```
 - [Kaynak 1](https://hakantopuz.medium.com/abstract-factory-design-pattern-nedir-ne-zaman-ve-nas%C4%B1l-kullan%C4%B1l%C4%B1r-25dea188477c) 
 - [Kaynak 2](https://yasinmemic.medium.com/abstract-factory-design-pattern-d142de6a883c) 
-## Adapter
+## Adapter Design
 - Sadece bir sınıfa özel olan arayüzleri diğer sınıflarla uyumlu arayüzler haline getiren bir tasarım kalıbıdır. Adaptörler uyumlu olmayan arayüzler sebebiyle birbirleri ile çalışamayan sınıflara da birbirleri ile çalışma imkanı sunarlar.
 ```csharp
 using System;
@@ -188,3 +188,107 @@ namespace Adapter
 ```
 - [Kaynak 1](https://metinalniacik.medium.com/adapter-design-pattern-tasar%C4%B1m-%C3%B6r%C3%BCnt%C3%BCs%C3%BC-3469833059d9) 
 - [Kaynak 2](https://medium.com/kodcular/adapt%C3%B6rdesign-pattern-adaptor-tasar%C4%B1m-deseni-a68ee58a35c2) 
+## Builder Design
+- Bir inşaatçı görev üstlenen yaklaşım sergilemektedir. Projemiz inşa süresindeyken oluşturacağımız bazı nesnelerin üretimleri oldukça maliyetli olabilir, zamanla bu nesnelerin yapısı değişebilir yahut güncellenebilir. Anlayacağınız nesne üzerinde her türlü dinamik süreç yaşanabilir. İşte bu tarz inşa durumlarında Builder Design Pattern ile ilgili nesneler genişletilebilir bir hale getirilmekte ve en önemlisi kod karmaşalığı minimize edilmektedir.
+```csharp
+using System;
+
+namespace Builder
+{
+    class Programs
+    {
+        static void Main(string[] args)
+        {
+            ProductDirector productDirector = new ProductDirector();
+            var builder = new NewCustomerProductBuilder();
+            productDirector.GenerateProduct(builder);
+            var model = builder.GetModel();
+            Console.WriteLine("Category: "+model.CategoryName + "\n-----");
+            Console.WriteLine("ProductName: " + model.ProductName + "\n-----");
+            Console.WriteLine("Discount: " + model.Discount + "\n-----");
+            Console.WriteLine("DiscountApplied: " + model.DiscountApplied + "\n-----");
+            Console.WriteLine("Id: " + model.Id + "\n-----");
+            Console.WriteLine("UnitPrice: " + model.UnitPrice + "\n-----");
+
+            Console.ReadKey();
+        }
+    }
+
+    public class ProductViewModel
+    {
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
+        public string ProductName { get; set; }
+        public decimal UnitPrice { get; set; }
+        public int Discount { get; set; }
+        public bool DiscountApplied { get; set; }
+    }
+
+    public abstract class ProductBuilder
+    {
+        public abstract void GetAll();
+        public abstract void ApplyDiscount();
+        public abstract ProductViewModel GetModel();
+    }
+
+    public class NewCustomerProductBuilder : ProductBuilder
+    {
+        private ProductViewModel model = new ProductViewModel();
+
+        public override void GetAll()
+        {
+            model.Id = 1;
+            model.CategoryName = "Beverages";
+            model.ProductName = "Chai";
+            model.UnitPrice = 20;
+        }
+
+        public override void ApplyDiscount()
+        {
+            model.Discount = 17;
+            model.DiscountApplied = true;
+        }
+
+        public override ProductViewModel GetModel()
+        {
+            return model;
+        }
+    }
+
+    public class OldCustomerProductBuilder : ProductBuilder
+    {
+        private ProductViewModel model = new ProductViewModel();
+
+        public override void GetAll()
+        {
+            model.Id = 1;
+            model.CategoryName = "Beverages";
+            model.ProductName = "Chai";
+            model.UnitPrice = 20;
+        }
+
+        public override void ApplyDiscount()
+        {
+            model.Discount = 17;
+            model.DiscountApplied = false;
+        }
+
+        public override ProductViewModel GetModel()
+        {
+            return model;
+        }
+    }
+
+    public class ProductDirector
+    {
+        public void GenerateProduct(ProductBuilder productBuilder)
+        {
+            productBuilder.GetAll();
+            productBuilder.ApplyDiscount();
+        }
+    }
+}
+```
+- [Kaynak 1](https://www.gencayyildiz.com/blog/c-builder-design-patternbuilder-tasarim-deseni/) 
+- [Kaynak 2](https://tugrulbayrak.medium.com/builder-pattern-2f6fb1dbf4a0) 
+
