@@ -1,5 +1,5 @@
 # CSharp(C#) Design Patterns
-## Abstract Factory Design
+## Abstract Factory Design Pattern
 - İlişkisel olan birden fazla nesnenin üretimini tek bir arayüz tarafından değil her ürün ailesi için farklı bir arayüz tanımlayarak sağlamaktadır.
 ```csharp
 using System;
@@ -114,7 +114,7 @@ namespace AbstractFactory
 ```
 - [Kaynak 1](https://hakantopuz.medium.com/abstract-factory-design-pattern-nedir-ne-zaman-ve-nas%C4%B1l-kullan%C4%B1l%C4%B1r-25dea188477c) 
 - [Kaynak 2](https://yasinmemic.medium.com/abstract-factory-design-pattern-d142de6a883c) 
-## Adapter Design
+## Adapter Design Pattern
 - Sadece bir sınıfa özel olan arayüzleri diğer sınıflarla uyumlu arayüzler haline getiren bir tasarım kalıbıdır. Adaptörler uyumlu olmayan arayüzler sebebiyle birbirleri ile çalışamayan sınıflara da birbirleri ile çalışma imkanı sunarlar.
 ```csharp
 using System;
@@ -188,7 +188,7 @@ namespace Adapter
 ```
 - [Kaynak 1](https://metinalniacik.medium.com/adapter-design-pattern-tasar%C4%B1m-%C3%B6r%C3%BCnt%C3%BCs%C3%BC-3469833059d9) 
 - [Kaynak 2](https://medium.com/kodcular/adapt%C3%B6rdesign-pattern-adaptor-tasar%C4%B1m-deseni-a68ee58a35c2) 
-## Builder Design
+## Builder Design Pattern
 - Bir inşaatçı görev üstlenen yaklaşım sergilemektedir. Projemiz inşa süresindeyken oluşturacağımız bazı nesnelerin üretimleri oldukça maliyetli olabilir, zamanla bu nesnelerin yapısı değişebilir yahut güncellenebilir. Anlayacağınız nesne üzerinde her türlü dinamik süreç yaşanabilir. İşte bu tarz inşa durumlarında Builder Design Pattern ile ilgili nesneler genişletilebilir bir hale getirilmekte ve en önemlisi kod karmaşalığı minimize edilmektedir.
 ```csharp
 using System;
@@ -291,4 +291,110 @@ namespace Builder
 ```
 - [Kaynak 1](https://www.gencayyildiz.com/blog/c-builder-design-patternbuilder-tasarim-deseni/) 
 - [Kaynak 2](https://tugrulbayrak.medium.com/builder-pattern-2f6fb1dbf4a0) 
+## Facade Design Pattern
+- Class kullanımını seviyelendiren bir tasarım desenidir. Basitçe herhangi bir class/fonksiyon içinden diğer class/fonksiyon'ları çağırmaya yarayan desendir. Facade deseni sistem karmaşıklığını gizler ve client(istemci)'nin sisteme erişmesini sağlayan bir arabirim görevi üstlenir. Bu desen bir grup class'ı ve özelliklerini (fonksiyon/değişken vb.) içeren tek bir ana sınıf olarak görev yapar.
+```csharp
+using System;
+
+namespace Facade
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CustomerManager customer = new CustomerManager();
+            customer.Save();
+
+            Console.ReadKey();
+        }
+    }
+
+    class Logging : ILogging
+    {
+        public void Log()
+        {
+            Console.WriteLine("Logged");
+        }
+    }
+
+    internal interface ILogging
+    {
+        void Log();
+    }
+
+    class Caching : ICaching
+    {
+        public void Cache()
+        {
+            Console.WriteLine("Cached");
+        }
+    }
+
+    internal interface ICaching
+    {
+        void Cache();
+    }
+    class Validate : IValidate
+    {
+        public void ValidateUser()
+        {
+            Console.WriteLine("Validate");
+        }
+    }
+
+    internal interface IValidate
+    {
+        void ValidateUser();
+    }
+    class Authorize : IAuthorize
+    {
+        public void CheckUser()
+        {
+            Console.WriteLine("Checked");
+        }
+    }
+
+    internal interface IAuthorize
+    {
+        void CheckUser();
+    }
+
+    class CustomerManager
+    {
+        private readonly CrossCuttingConcernsFacade _concerns;
+
+        public CustomerManager()
+        {
+            _concerns = new CrossCuttingConcernsFacade();
+        }
+
+        public void Save()
+        {
+            _concerns.Logging.Log();
+            _concerns.Authorize.CheckUser();
+            _concerns.Validate.ValidateUser();
+            _concerns.Caching.Cache();
+            Console.WriteLine("Saved");
+        }
+    }
+
+    class CrossCuttingConcernsFacade
+    {
+        public ILogging Logging;
+        public ICaching Caching;
+        public IAuthorize Authorize;
+        public IValidate Validate;
+
+        public CrossCuttingConcernsFacade()
+        {
+            Logging = new Logging();
+            Caching = new Caching();
+            Authorize = new Authorize();
+            Validate = new Validate();
+        }
+    }
+}
+```
+- [Kaynak 1](https://www.kadir.xyz/yazi/57/facade-tasarim-deseni-facade-pattern) 
+- [Kaynak 2](https://www.gencayyildiz.com/blog/c-facade-design-patternfacade-tasarim-deseni/) 
 
