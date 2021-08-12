@@ -1,7 +1,0 @@
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\bin\Debug\Builder.exe.config
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\bin\Debug\Builder.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\bin\Debug\Builder.pdb
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\obj\Debug\Builder.csproj.AssemblyReference.cache
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\obj\Debug\Builder.csproj.CoreCompileInputs.cache
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\obj\Debug\Builder.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Builder\obj\Debug\Builder.pdb

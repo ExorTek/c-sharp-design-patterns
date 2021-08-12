@@ -1,7 +1,0 @@
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\bin\Debug\Prototype.exe.config
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\bin\Debug\Prototype.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\bin\Debug\Prototype.pdb
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\obj\Debug\Prototype.csproj.AssemblyReference.cache
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\obj\Debug\Prototype.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Prototype\obj\Debug\Prototype.pdb

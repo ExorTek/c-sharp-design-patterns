@@ -1,6 +1,0 @@
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\bin\Debug\Adapter.exe.config
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\bin\Debug\Adapter.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\bin\Debug\Adapter.pdb
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\obj\Debug\Adapter.csproj.CoreCompileInputs.cache
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\obj\Debug\Adapter.exe
-C:\Users\Memet\Desktop\c-sharp-design-patterns\Adapter\obj\Debug\Adapter.pdb
