@@ -38,7 +38,18 @@ namespace Facade
     {
         void Cache();
     }
+    class Validate : IValidate
+    {
+        public void ValidateUser()
+        {
+            Console.WriteLine("Validate");
+        }
+    }
 
+    internal interface IValidate
+    {
+        void ValidateUser();
+    }
     class Authorize : IAuthorize
     {
         public void CheckUser()
@@ -54,7 +65,7 @@ namespace Facade
 
     class CustomerManager
     {
-        private CrossCuttingConcernsFacade _concerns;
+        private readonly CrossCuttingConcernsFacade _concerns;
 
         public CustomerManager()
         {
@@ -65,6 +76,7 @@ namespace Facade
         {
             _concerns.Logging.Log();
             _concerns.Authorize.CheckUser();
+            _concerns.Validate.ValidateUser();
             _concerns.Caching.Cache();
             Console.WriteLine("Saved");
         }
@@ -75,12 +87,14 @@ namespace Facade
         public ILogging Logging;
         public ICaching Caching;
         public IAuthorize Authorize;
+        public IValidate Validate;
 
         public CrossCuttingConcernsFacade()
         {
             Logging = new Logging();
             Caching = new Caching();
             Authorize = new Authorize();
+            Validate = new Validate();
         }
     }
 }
